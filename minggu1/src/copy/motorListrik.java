@@ -29,7 +29,7 @@ public class motorListrik extends motor {
 
     public void gunakanMotor(int jarak) {
         double penggunaanBaterai = jarak / 10.0; 
-        // System.out.println("Siap berkendara ?");
+        System.out.println("Siap berkendara ?");
         
         if (kapasitasBaterai > penggunaanBaterai) {
             kapasitasBaterai -= penggunaanBaterai;

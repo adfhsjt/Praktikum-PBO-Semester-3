@@ -29,6 +29,16 @@ public class motorMasukan extends motor {
         double penggunaanBensin = jarak / 15;
         System.out.println("Siap berkendara ?");
 
+//        if (cc >= 1000) {
+//            penggunaanBensin = jarak / 4;
+//        } else if (cc >= 500) {
+//            penggunaanBensin = jarak / 8;
+//        } else if (cc >= 150) {
+//            penggunaanBensin = jarak / 12;
+//        } else {
+//            penggunaanBensin = jarak / 16;
+//        }
+
         if (bensin > penggunaanBensin) {
             bensin -= penggunaanBensin;
             System.out.println("Brummm");
