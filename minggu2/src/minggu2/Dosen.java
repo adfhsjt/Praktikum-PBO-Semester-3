@@ -26,7 +26,8 @@ public class Dosen {
 
     public void addMhs(Mahasiswa mhs) {
         if (countMahasiswa < mahasiswa.length) {
-            mahasiswa[countMahasiswa++] = mhs;
+            mahasiswa[countMahasiswa] = mhs;
+            countMahasiswa++;
         } else {
             System.out.println("Jumlah mahasiswa sudah mencapai batas maksimum.");
         }
