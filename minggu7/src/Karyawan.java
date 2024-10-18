@@ -56,5 +56,10 @@ public class Karyawan {
         return gaji;
     }
     
+    public void makan(){
+        System.out.println("Maem");
+    }
+    
+    
     
 }

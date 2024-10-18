@@ -47,6 +47,43 @@ public class Staff extends Karyawan{
         
     }
     
+    public void methodX(int a){
+        System.out.println("kkk");
+    }
+    
+    public void methodX(double a){
+        System.out.println("kkk");
+    }
+    
+    public void methodX(){
+        System.out.println("kkk");
+    }
+    
+    public void methodX(int a, int b){
+        System.out.println("kkk");
+    }
+    
+    public void methodX(double a, double b){
+        System.out.println("kkk");
+    }
+    
+//    public void methodX(int b, double a){
+//        System.out.println("kkk");
+//    }
+    
+    public void methodX(double a, int b){
+        System.out.println("kkk");
+    }
+    
+    @Override
+    public void makan(){
+        System.out.println("Makan");
+    }
+    
+    
+    
+    
+    
     
     
     

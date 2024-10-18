@@ -14,6 +14,11 @@ public class minggu7 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+       
+        
+        Billing bn = new Billing();
+        System.out.println("Total : " + bn.hitung(1136, 150000));
 
         System.out.println("Program Testing Class Manager & Staff");
         Manager man[] = new Manager[2];
@@ -68,6 +73,8 @@ public class minggu7 {
         //cetak informasi dari manager + staffnya
         man[0].lihatInfo();
         man[1].lihatInfo();
+        
+        staff1[1].makan();
 
         Segitiga s1 = new Segitiga();
         System.out.println("Total sudut 1 parameter : " + s1.totalSudut(270));
