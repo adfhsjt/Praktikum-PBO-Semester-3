@@ -1,0 +1,66 @@
+A. Software Pendukung
+----------------------------------------
+ 1. Database Server 
+	MySQL			->	XAMP/WAMP/LARAGON
+	Ms. SQL Server 	->	SQL2022-SSEI-Dev
+ 2. Editor data & structure Database 
+	MySQL			->	Navicate/HeidiSQL/PHP MyAdmin
+	Ms. SQL Server 	->	SQL Server Management Studio (SSMS-Setup-ENU) 
+ 3. Java Database Connector (JDBC)
+	MySQL			->	mysql-connector-j-8.3.0.jar
+	Ms. SQL Server	->	mssql-jdbc-12.8.1.jre8.jar
+	
+B. Langkah Pembuatan Program CRUD MVC
+-------------------------------------------------------------
+ 1. buat database tatib
+ 2. buat project CRUD_TATIB tanpa Main Class
+ 3. buat package (model, view, controller)
+ 4. tambahkan libraries 
+	MySQL 			->	mysql-connector-j-8.3.0.jar
+	Ms. SQL Server	->	mssql-jdbc-12.8.1.jre8.jar
+ 5. buat class SQLServerConnection di package controller
+ ------------------------------------------------------------
+ 6. buat class DAOMahasiswa.java di package controller 
+ 7. buat class ModelMahasiswa.java di package model
+ 8. buat class ModelTableMahasiswa.java di package model
+ 9. buat class ControllerMahasiswa.java di package controller
+10. buat class Mahasiswa.java (JInternalFrame) di package view
+-------------------------------------------------------------
+11. ulangi langkah 6 sd 10 untuk mengelola data
+	- Pengguna
+	- Dosen
+	- Pelanggaran
+	- PelanggaranMahasiswa
+	- dst
+12. buat class MenuAdministrator.java (JFrame) di package view
+-------------------------------------------------------------
+dst
+
+
+
+
+
+
+
+
+
+
+
+
+
+tfId
+tfFirstName
+tfLastName
+spDateOfBirth
+cbGender
+tfPhone
+tfAddress
+tfCity
+tfCountry
+
+btnInsert
+btnSave
+btnDelete
+btnExit
+
+tableMahasiswa

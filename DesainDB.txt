@@ -1,0 +1,75 @@
+USE [tatib]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [tatib].[dbo].[pengguna](
+	[username] [varchar](100) NOT NULL,
+	[password] [varchar](100) NOT NULL,
+	[sebagai] [varchar](100) NOT NULL CHECK (gender IN('Administrator', 'Mahasiswa', 'DPA', 'Dosen Pengajar')),
+ CONSTRAINT [PK_pengguna] PRIMARY KEY CLUSTERED 
+(
+	[username] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [tatib].[dbo].[mahasiswa](
+	[nim] [varchar](10) NOT NULL,
+	[nama] [varchar](50) NOT NULL,
+	[tmplahir] [varchar](50) NULL,
+	[tgllahir] [date] NULL,
+	[gender] [varchar](10) NOT NULL CHECK (gender IN('Pria', 'Wanita')),
+	[alamat] [varchar](100) NULL,
+	[kabupatenkota] [varchar](50) NULL,
+	[provinsi] [varchar](50) NULL,
+ CONSTRAINT [PK_mahasiswa] PRIMARY KEY CLUSTERED 
+(
+	[nim] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [tatib].[dbo].[dosen](
+	[nip] [varchar](10) NOT NULL,
+	[nama] [varchar](50) NOT NULL,
+	[tmplahir] [varchar](50) NULL,
+	[tgllahir] [date] NULL,
+	[gender] [varchar](10) NOT NULL CHECK (gender IN('Pria', 'Wanita')),
+	[sebagai] [varchar](30) NOT NULL CHECK (sebagai IN('DPA', 'Dosen Pengajar')),
+	[alamat] [varchar](100) NULL,
+	[kabupatenkota] [varchar](50) NULL,
+	[provinsi] [varchar](50) NULL,
+ CONSTRAINT [PK_dosen] PRIMARY KEY CLUSTERED 
+(
+	[nip] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [tatib].[dbo].[pelanggaran](
+	[idpelanggaran] [int] NOT NULL,
+	[jenispelanggaran] [varchar](100) NOT NULL,
+	[levelpelanggaran] [int] NOT NULL,
+ CONSTRAINT [PK_pelanggaran] PRIMARY KEY CLUSTERED 
+(
+	[idpelanggaran] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [tatib].[dbo].[sanksi](
+	[idsanksi] [int] NOT NULL,
+	[jenissanksi] [varchar](100) NOT NULL,
+	[levelpelanggaran] [int] NOT NULL,
+ CONSTRAINT [PK_sanksi] PRIMARY KEY CLUSTERED 
+(
+	[idsanksi] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
