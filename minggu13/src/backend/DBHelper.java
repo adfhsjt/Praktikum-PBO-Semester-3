@@ -5,7 +5,6 @@
 package backend;
 
 import java.sql.*;
-import com.mysql.cj.jdbc.Driver;
 
 /**
  *

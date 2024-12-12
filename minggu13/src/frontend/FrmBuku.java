@@ -36,18 +36,20 @@ public class FrmBuku extends javax.swing.JFrame {
     }
     
     public void tampilkanData(){
-        String[] kolom = {"ID", "Kategori", "Judul", "Penulis", "Penerbit"};
+        String[] kolom = {"ID", "Kategori", "Judul", "Penulis", "Penerbit", "Status"};
         ArrayList<Buku> list = new Buku().getAll();
-        Object rowData[] = new Object[5];
+        Object rowData[] = new Object[6];
         
         tblBuku.setModel(new DefaultTableModel(new Object[][] {}, kolom));
         
-        for(Buku bk : list){
-            rowData[0] = bk.getIdbuku();
-            rowData[1] = bk.getJudul();
-            rowData[2] = bk.getKategori();
-            rowData[3] = bk.getPenerbit();
-            rowData[4] = bk.getPenulis();
+        for(int i = 0; i < list.size(); i++){
+            rowData[0] = list.get(i).getIdbuku();
+            rowData[1] = list.get(i).getKategori().getNama();
+            rowData[2] = list.get(i).getJudul();
+            rowData[3] = list.get(i).getPenulis();
+            rowData[4] = list.get(i).getPenerbit();
+            rowData[5] = list.get(i).getStatus();
+            
             
             
             ((DefaultTableModel) tblBuku.getModel()).addRow(rowData);
@@ -58,17 +60,17 @@ public class FrmBuku extends javax.swing.JFrame {
     public void cari(String keyword){
         String[] kolom = {"ID", "Kategori", "Judul", "Penulis", "Penerbit"};
         ArrayList<Buku> list = new Buku().search(keyword);
-        Object rowData[] = new Object[5];
+        Object rowData[] = new Object[6];
         
         tblBuku.setModel(new DefaultTableModel(new Object[][] {}, kolom));
         
         for(Buku bk : list){
             rowData[0] = bk.getIdbuku();
-            rowData[1] = bk.getJudul();
-            rowData[2] = bk.getKategori();
-            rowData[3] = bk.getPenerbit();
-            rowData[4] = bk.getPenulis();
-            
+            rowData[1] = bk.getKategori().getNama();
+            rowData[2] = bk.getJudul();
+            rowData[3] = bk.getPenulis();
+            rowData[4] = bk.getPenerbit();
+            rowData[5] = bk.getStatus();
             
             ((DefaultTableModel) tblBuku.getModel()).addRow(rowData);
             
@@ -78,10 +80,6 @@ public class FrmBuku extends javax.swing.JFrame {
     public void tampilkanCmbKategori(){
         cmbKategori.setModel(new DefaultComboBoxModel(new Kategori().getAll().toArray()));
     }
-    
-    
-    
-    
     
 
     /**
@@ -299,6 +297,7 @@ public class FrmBuku extends javax.swing.JFrame {
     private void btnTambahBaruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahBaruActionPerformed
         // TODO add your handling code here:
         kosongkanForm();
+        tampilkanData();
     }//GEN-LAST:event_btnTambahBaruActionPerformed
 
     /**
