@@ -187,6 +187,7 @@ public class FrmPengembalian extends javax.swing.JFrame {
         txtTanggalKembali = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(620, 500));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -250,6 +251,7 @@ public class FrmPengembalian extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblPengembalian.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jScrollPane1.setViewportView(tblPengembalian);
 
         getContentPane().add(jScrollPane1);
@@ -391,14 +393,11 @@ public class FrmPengembalian extends javax.swing.JFrame {
             if (pm != null) {
                 if (pm.getTglpengembalian() == null) {
                     Pengembalian p = new Pengembalian();
-                    Pegawai pegawai = new Pegawai();
-                    Anggota anggota = new Anggota();
-                    Buku buku = new Buku();
+                    Pegawai pegawai = pm.getPegawai();
+                    Anggota anggota = pm.getAnggota();
+                    Buku buku = pm.getBuku();
 
                     p.setIdpeminjaman(Integer.parseInt(txtIdPeminjaman.getText()));
-                    pegawai.setIdpegawai(Integer.parseInt(txtIdPegawai.getText()));
-                    anggota.setIdanggota(Integer.parseInt(txtIdAnggota.getText()));
-                    buku.setIdbuku(Integer.parseInt(txtIdBuku.getText()));
 
                     p.setPegawai(pegawai);
                     p.setAnggota(anggota);
