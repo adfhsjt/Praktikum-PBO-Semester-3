@@ -260,6 +260,7 @@ public class FrmAnggota extends javax.swing.JFrame {
         an.save();
         txtIdAnggota.setText(Integer.toString(an.getIdanggota()));
         tampilkanData();
+        kosongkanForm();
     }//GEN-LAST:event_btnSimpanActionPerformed
 
     private void btnTambahBaruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahBaruActionPerformed

@@ -101,7 +101,7 @@ public class Pengembalian {
                 + "LEFT JOIN pegawai s ON p.idpegawai = s.idpegawai "
                 + "LEFT JOIN anggota a ON p.idanggota = a.idanggota "
                 + "LEFT JOIN buku b ON p.idbuku = b.idbuku "
-                + "WHERE p.idpeminjaman = '" + id + "' p.tanggalkembali IS NOT NULL");
+                + "WHERE p.idpeminjaman = '" + id + "' AND p.tanggalkembali IS NOT NULL");
 
         try {
             while (rs.next()) {

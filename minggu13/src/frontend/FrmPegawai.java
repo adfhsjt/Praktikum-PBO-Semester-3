@@ -359,6 +359,8 @@ public class FrmPegawai extends javax.swing.JFrame {
             p.save();
 
             txtIdPegawai.setText(Integer.toString(p.getIdpegawai()));
+            kosongkanForm();
+            tampilkanData();
 
             JOptionPane.showMessageDialog(null, "Data Pegawai berhasil disimpan.", "Sukses", JOptionPane.INFORMATION_MESSAGE);
         } else {

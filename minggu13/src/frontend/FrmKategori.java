@@ -226,6 +226,7 @@ public class FrmKategori extends javax.swing.JFrame {
         kat.save();
         txtIdKategori.setText(Integer.toString(kat.getIdkategori()));
         tampilkanData();
+        kosongkanForm();    
     }//GEN-LAST:event_btnSimpanActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed

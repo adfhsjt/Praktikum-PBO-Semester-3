@@ -407,6 +407,7 @@ public class FrmPengembalian extends javax.swing.JFrame {
                     p.save();
                     txtJudul.setText(Integer.toString(p.getIdpeminjaman()));
                     tampilkanData();
+                    kosongkanForm();
                     JOptionPane.showMessageDialog(null, "Pengembalian Berhasil.\n", "Sukses", JOptionPane.INFORMATION_MESSAGE);
 
                 } else {

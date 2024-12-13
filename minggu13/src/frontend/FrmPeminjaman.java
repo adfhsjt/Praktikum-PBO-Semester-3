@@ -454,6 +454,7 @@ public class FrmPeminjaman extends javax.swing.JFrame {
                     p.save();
                     txtIdPeminjaman.setText(Integer.toString(p.getIdpeminjaman()));
                     tampilkanData();
+                    kosongkanForm();
                     JOptionPane.showMessageDialog(null, "Peminjaman Berhasil.\n", "Sukses", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     JOptionPane.showInternalMessageDialog(null, "Maaf, buku sedang dipinjam customer lain.", "Peringatan", JOptionPane.WARNING_MESSAGE);

@@ -300,6 +300,7 @@ public class FrmBuku extends javax.swing.JFrame {
         bk.save();
         txtIdBuku.setText(Integer.toString(bk.getIdbuku()));
         tampilkanData();
+        kosongkanForm();
     }//GEN-LAST:event_btnSimpanActionPerformed
 
     private void btnTambahBaruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahBaruActionPerformed
