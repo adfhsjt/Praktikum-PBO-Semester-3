@@ -242,6 +242,7 @@ public class FrmKategori extends javax.swing.JFrame {
     private void btnTambahBaruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahBaruActionPerformed
         // TODO add your handling code here:
         kosongkanForm();
+        tampilkanData();
     }//GEN-LAST:event_btnTambahBaruActionPerformed
 
     private void tblKategoriMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblKategoriMouseClicked

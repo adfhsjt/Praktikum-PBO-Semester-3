@@ -41,8 +41,8 @@ public class FrmPengembalian extends javax.swing.JFrame {
         txtNamaAnggota.setText("");
         txtIdBuku.setText("");
         txtJudul.setText("");
-        txtTanggalPinjam.setText("yyyy-MM-dd");
-        txtTanggalKembali.setText("yyyy-MM-dd");
+        txtTanggalPinjam.setText("");
+        txtTanggalKembali.setText(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
     }
 
     public void tampilkanData() {
@@ -359,7 +359,7 @@ public class FrmPengembalian extends javax.swing.JFrame {
                             txtIdBuku.setText(String.valueOf(p.getBuku().getIdbuku()));
                             txtJudul.setText(p.getBuku().getJudul());
                             txtTanggalPinjam.setText(p.getTglpeminjaman());
-                            txtTanggalKembali.setText("NULL");
+                            txtTanggalKembali.setText(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
                         }
                     });
                 } else {
@@ -402,7 +402,7 @@ public class FrmPengembalian extends javax.swing.JFrame {
                     p.setPegawai(pegawai);
                     p.setAnggota(anggota);
                     p.setBuku(buku);
-                    p.setTglpengembalian(new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
+                    p.setTglpengembalian(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 
                     p.save();
                     txtJudul.setText(Integer.toString(p.getIdpeminjaman()));
